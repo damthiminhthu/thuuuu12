@@ -1,0 +1,498 @@
+/* === GLOBAL === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 150px;
+}
+.hero-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+.slider-section.hero {
+    margin-top: 30px;  /* tăng hoặc giảm cho phù hợp */
+}
+/* === BUTTONS === */
+.buttons {
+    display: flex;
+    justify-content: center;  /* căn giữa cả cụm nút */
+    gap: 10px;                /* khoảng cách giữa các nút */
+    margin-top: 20px;
+    background-color: #eef5ff;
+    font-family: Arial, sans-serif;
+}
+
+.btn-box {
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    font-family: Arial, sans-serif;
+    margin: 0;   /* bỏ margin để không bị xa */
+}
+
+.btn {
+    padding: 20px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2875c2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* === GUIDANCE CARDS === */
+.card-container.guidance-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #cde9ff;
+    padding: 20px 0;
+}
+
+.card-container.guidance-cards .card {
+    background-color: #f9fbff;
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 10px;
+    text-align: center;
+    color: #004080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+
+.card-container.guidance-cards .card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.card-container.guidance-cards .card h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-container.guidance-cards .card p {
+    font-size: 14px;
+    color: #335a8e;
+}
+
+.card-container.guidance-cards .card:hover {
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* === VISION SECTION === */
+.vision-section {
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+    background-color: #d4ebff;
+    color: #004080;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #003366;
+}
+
+/* Vision Cards container */
+.card-container.vision-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    background-color: #cde9ff;
+    padding: 20px 0;
+}
+
+/* Vision Card style */
+.card-container.vision-cards .card {
+    background-color: #f9fbff;
+    width: 180px;
+    height: 220px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+    text-align: center;
+    color: #5689e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.card-container.vision-cards .card img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Active card style */
+.card-container.vision-cards .card.active {
+    border-color: #5689e0;
+    background-color: #f9fbff;
+    color: #004080;
+    box-shadow: 0 8px 20px rgba(86, 137, 224, 0.4);
+}
+
+/* Hover effect on non-active cards */
+.card-container.vision-cards .card:hover:not(.active) {
+    box-shadow: 0 15px 30px rgba(86, 137, 224, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Detail content below vision cards */
+.detail-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #cde9ff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    color: #003366;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.detail-image {
+    width: 300px;
+    max-height: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#detail-text {
+    flex: 1;
+}
+
+.detail-content h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.detail-content h4 {
+    margin-bottom: 10px;
+}
+
+.detail-content ul {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.detail-content ul li {
+    margin-bottom: 8px;
+}
+
+/* === FOOTER === */
+footer.footer {
+    text-align: center;
+    padding: 15px;
+    background: #007BFF;
+    color: white;
+    margin-top: 40px;
+}
+
+/* === SLIDER FULL WIDTH === */
+.slider-section {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img {
+    width: 100vw;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Nút điều hướng */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+    font-size: 22px;
+    z-index: 10;
+}
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.7);
+}
+.prev {
+    left: 20px;
+}
+.next {
+    right: 20px;
+}
+
+/* === SERVICE CARDS === */
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin-top: 2cm;   /* lùi xuống 2cm */
+}
+
+.service-card {
+    width: 220px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    height: 140px;
+}
+
+.service-card p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #004080;
+    font-family: Arial, sans-serif;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-card:active {
+    transform: scale(0.96);
+    box-shadow: 0 6px 15px rgba(0, 64, 128, 0.4);
+    background-color: #e6f0ff;
+    font-family: Arial, sans-serif;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .card-container.guidance-cards,
+    .card-container.vision-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-container.guidance-cards .card,
+    .card-container.vision-cards .card {
+        width: 90%;
+        max-width: 250px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .detail-content {
+        flex-direction: column;
+    }
+    .detail-image {
+        width: 100%;
+        max-height: none;
+        margin-bottom: 20px;
+    }
+        .main-nav .menu {
+        flex-direction: column;
+        gap: 0;
+    }
+    .main-nav .menu li a {
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/* === HEADER - LOGO + LOGIN + MENU === */
+
+/* Container tổng thể header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;   /* thêm padding để logo + chữ thoáng */
+}
+
+/* Logo + text nằm bên trái, hàng ngang */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 1;
+}
+
+.logo-img {
+    height: 70px;   /* chỉnh lại kích thước logo */
+    width: auto;
+    position: absolute;   /* cố định trong góc trái */
+    top: 20px;            /* cách mép trên 10px */
+    left: 30px;           /* cách mép trái 20px (~2cm) */
+
+}
+
+.clinic-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #003366;
+}
+
+.clinic-title h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.slogan {
+    margin: 0;
+    font-size: 13px;
+    color: rgb(71, 21, 6);
+    font-weight: bold;     /* đậm */
+    font-style: italic;    /* nghiêng */
+    position: relative;    /* cho phép dịch chuyển */
+    top: -0.5cm;             /* lùi lên 2cm */
+}
+
+.login-button a.btn-login {
+    background-color: #0056b3;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.login-button a.btn-login:hover {
+    background-color: #003d80;
+}
+
+/* Thanh menu chính dưới header */
+.main-nav {
+    width: 100%;
+    background-color: #b9dfff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 12px;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    gap: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #003366;
+    padding: 8px 14px;
+    border-radius: 10px; /* bo góc menu */
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #cceeff;
+}
+
+/* Responsive Header */
+@media (max-width: 700px) {
+    .header {
+        justify-content: center;
+        padding: 20px 10px 40px 10px;
+    }
+    .logo-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .login-button {
+        position: static;
+        margin-top: 10px;
+        align-self: center;
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
+    .menu {
+        gap: 10px;
+    }
+    .menu li a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+}
